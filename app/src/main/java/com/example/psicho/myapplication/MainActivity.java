@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
         for (CellInfo cellInfo : cellInfoList) {
             if (cellInfo instanceof CellInfoLte) {
                 cellInfoLte = (CellInfoLte) cellInfo;
-                cellInfoTV.setText(String.valueOf("Pci" + cellInfoLte.getCellIdentity().getPci()));
+                cellInfoLteTV.setText(String.valueOf("Pci" + cellInfoLte.getCellIdentity().getPci()));
             }
         }
 
@@ -56,6 +56,5 @@ public class MainActivity extends ActionBarActivity {
     private void setupUI() {
         cellInfoTV = (TextView) findViewById(R.id.cell_info_TV);
         cellInfoLteTV = (TextView) findViewById(R.id.cell_info_lte_TV);
-
     }
 }
